@@ -12,7 +12,7 @@ spec:
         app: flask
     spec:
       containers:
-        - name: flask
+        - name: faurddin/flask
           image: faurddin/flask
           resources:
             limits:
