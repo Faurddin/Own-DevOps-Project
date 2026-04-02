@@ -30,7 +30,7 @@ pipeline{
 		}
 		stage('minikube url'){
 			steps{
-				sh' minikube service flask-app --url'
+				sh' minikube service flask --url'
 			}
 		}
 	}
