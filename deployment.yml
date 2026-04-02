@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: flask
+          image: faurddin/flask
           resources:
             limits:
               memory: "128Mi"
