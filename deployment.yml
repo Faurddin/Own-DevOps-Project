@@ -12,11 +12,7 @@ spec:
         app: flask
     spec:
       containers:
-        - name: flask
-          image: faurddin/flask
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
-          ports:
+      - name: flask
+        image: faurddin/flask
+        ports:
           - containerPort: 5000
