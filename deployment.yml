@@ -1,0 +1,22 @@
+apiVersion: app/V1
+kind: Deployment
+metadata:
+  name: flask
+spec:
+  selector:
+    matchlabels:
+      app: flask
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: flask
+          image: flask
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+          - containerPort: 5000
