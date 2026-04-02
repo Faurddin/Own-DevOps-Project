@@ -25,7 +25,7 @@ pipeline{
 		}
 		stage('K8s Deployment'){
 			steps{
-				sh' kubectl create deployment deployment.yml'
+				sh' kubectl apply -f deployment.yml'
 			}
 		}
 		stage('minikube url'){
