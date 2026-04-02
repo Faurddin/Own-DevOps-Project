@@ -9,6 +9,12 @@ pipeline{
 				git branch: 'main', url:'https://github.com/Faurddin/Own-DevOps-Project.git'
 			}
 		}
+		stage('docker stop old containers'){
+            steps{
+                sh' docker stop flask'
+				sh' docker rm -f flask'
+            }
+        }
         stage('docker build'){
             steps{
                 sh' docker build -t flask .'
