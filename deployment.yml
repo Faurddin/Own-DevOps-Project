@@ -1,10 +1,10 @@
-apiVersion: app/V1
+apiVersion: apps/V1
 kind: Deployment
 metadata:
   name: flask
 spec:
   selector:
-    matchlabels:
+    matchLabels:
       app: flask
   template:
     metadata:
@@ -12,7 +12,7 @@ spec:
         app: flask
     spec:
       containers:
-        - name: faurddin/flask
+        - name: flask
           image: faurddin/flask
           resources:
             limits:
