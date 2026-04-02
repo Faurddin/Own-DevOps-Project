@@ -23,5 +23,15 @@ pipeline{
 				'''
 			}
 		}
+		stage('K8s Deployment'){
+			steps{
+				sh' kubcetl create deployment deployment.yml'
+			}
+		}
+		stage('minikube url'){
+			steps{
+				sh' minikube service flask-app --url'
+			}
+		}
 	}
 }
